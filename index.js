@@ -5,7 +5,7 @@ async function main() {
   const express = require("express");
 
   const bot = new Telegraf(process.env.BOT_TOKEN);
-  const channelId = process.env.CHANNEL_ID; // Add this line for the channel ID
+  const channelId = "-1002156461761" // Add this line for the channel ID
 
   bot.start(async (ctx) => {
     try {
