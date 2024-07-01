@@ -26,6 +26,7 @@
       const messageText = ctx.message.text;
       if (
         messageText.includes("terabox.com") ||
+       messageText.includes("teraboxlink.com") ||
         messageText.includes("teraboxapp.com")
       ) {
         //const parts = messageText.split("/");
