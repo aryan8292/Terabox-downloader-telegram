@@ -1,5 +1,4 @@
-
- async function main() {
+async function main() {
   const { Telegraf, Markup } = require("telegraf");
   const { getDetails } = require("./api");
   const { sendFile } = require("./utils");
@@ -10,10 +9,10 @@
   bot.start(async (ctx) => {
     try {
       ctx.reply(
-        'Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.',
+        `Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.\n\nMade with ❤️ by @botcodes123\n\nSend any terabox link to download.`,
         Markup.inlineKeyboard([
-          Markup.button.url(" ✅Channel", "https://t.me/ary_botz"),
-          Markup.button.url("⚠️Report bug", "https://t.me/Ary_botz"),
+          Markup.button.url(" Channel", "https://t.me/botcodes123"),
+          Markup.button.url("Report bug", "https://t.me/Armanidrisi_bot"),
         ]),
       );
     } catch (e) {
@@ -37,7 +36,7 @@
         const details = await getDetails(messageText);
         if (details && details.direct_link) {
           try {
-            ctx.reply(Sending Files Please Wait.!!);
+            ctx.reply(`Sending Files Please Wait.!!`);
             sendFile(details.direct_link, ctx);
           } catch (e) {
             console.error(e); // Log the error for debugging
@@ -61,4 +60,4 @@
   app.listen(process.env.PORT || 3000, () => console.log("Server Started"));
 }
 
-main()
+main();
