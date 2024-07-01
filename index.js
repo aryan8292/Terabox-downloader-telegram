@@ -10,7 +10,7 @@
   bot.start(async (ctx) => {
     try {
       ctx.reply(
-        Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.,
+        'Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.',
         Markup.inlineKeyboard([
           Markup.button.url(" ✅Channel", "https://t.me/ary_botz"),
           Markup.button.url("⚠️Report bug", "https://t.me/Ary_botz"),
